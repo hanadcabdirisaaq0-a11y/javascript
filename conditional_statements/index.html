@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Category Checker</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 1px 1px 3px #333;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 300px;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px solid #fda085;
+      outline: none;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #fda085;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #f6d365;
+      color: #333;
+    }
+
+    p {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍓 Fruit Category Checker 🍊</h1>
+  <div class="container">
+    <input type="text" id="fruitInput" placeholder="Type a fruit name...">
+    <br>
+    <button onclick="checkFruit()">Check Category</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function checkFruit() {
+      let fruit = document.getElementById("fruitInput").value.toLowerCase();
+      let result = document.getElementById("result");
+      let category;
+
+      switch(fruit) {
+        case "orange":
+        case "lemon":
+        case "lime":
+        case "grapefruit":
+          category = "🍊 Citrus Fruit";
+          break;
+
+        case "apple":
+        case "pear":
+        case "peach":
+          category = "🍎 Pome Fruit";
+          break;
+
+        case "strawberry":
+        case "blueberry":
+        case "raspberry":
+        case "blackberry":
+          category = "🍓 Berry";
+          break;
+
+        case "banana":
+        case "mango":
+        case "pineapple":
+        case "papaya":
+          category = "🥭 Tropical Fruit";
+          break;
+
+        case "watermelon":
+        case "melon":
+        case "cantaloupe":
+          category = "🍉 Melon Family";
+          break;
+
+        default:
+          category = "❓ Unknown fruit category";
+      }
+
+      result.textContent = category;
+    }
+  </script>
+
+</body>
+</html>

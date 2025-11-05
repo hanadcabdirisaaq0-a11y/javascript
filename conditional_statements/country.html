@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City & Country Finder</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 1px 1px 3px #333;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 320px;
+    }
+
+    input {
+      width: 85%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px solid #acb6e5;
+      outline: none;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #74ebd5;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #acb6e5;
+      color: #333;
+    }
+
+    p {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌍 City → Country Finder 🏙️</h1>
+  <div class="container">
+    <input type="text" id="cityInput" placeholder="Type a city name...">
+    <br>
+    <button onclick="findCountry()">Find Country</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function findCountry() {
+      let city = document.getElementById("cityInput").value.toLowerCase();
+      let result = document.getElementById("result");
+      let country;
+
+      switch(city) {
+        // USA
+        case "new york":
+        case "los angeles":
+        case "chicago":
+        case "houston":
+        case "miami":
+          country = "🇺🇸 United States";
+          break;
+
+        // United Kingdom
+        case "london":
+        case "manchester":
+        case "birmingham":
+        case "liverpool":
+          country = "🇬🇧 United Kingdom";
+          break;
+
+        // France
+        case "paris":
+        case "lyon":
+        case "marseille":
+        case "nice":
+          country = "🇫🇷 France";
+          break;
+
+        // Italy
+        case "rome":
+        case "milan":
+        case "naples":
+        case "venice":
+          country = "🇮🇹 Italy";
+          break;
+
+        // Germany
+        case "berlin":
+        case "munich":
+        case "hamburg":
+        case "frankfurt":
+          country = "🇩🇪 Germany";
+          break;
+
+        // Canada
+        case "toronto":
+        case "vancouver":
+        case "montreal":
+        case "ottawa":
+          country = "🇨🇦 Canada";
+          break;
+
+        // Japan
+        case "tokyo":
+        case "osaka":
+        case "kyoto":
+        case "hiroshima":
+          country = "🇯🇵 Japan";
+          break;
+
+        // China
+        case "beijing":
+        case "shanghai":
+        case "guangzhou":
+        case "shenzhen":
+          country = "🇨🇳 China";
+          break;
+
+        // Somalia
+        case "mogadishu":
+        case "hargeisa":
+        case "garowe":
+        case "kismayo":
+          country = "🇸🇴 Somalia";
+          break;
+
+        // Kenya
+        case "nairobi":
+        case "mombasa":
+        case "kisumu":
+          country = "🇰🇪 Kenya";
+          break;
+
+        // South Africa
+        case "johannesburg":
+        case "cape town":
+        case "durban":
+          country = "🇿🇦 South Africa";
+          break;
+
+        // India
+        case "delhi":
+        case "mumbai":
+        case "kolkata":
+        case "bangalore":
+          country = "🇮🇳 India";
+          break;
+
+        // Saudi Arabia
+        case "riyadh":
+        case "jeddah":
+        case "mecca":
+          country = "🇸🇦 Saudi Arabia";
+          break;
+
+        // Turkey
+        case "istanbul":
+        case "ankara":
+        case "izmir":
+          country = "🇹🇷 Turkey";
+          break;
+
+        // Australia
+        case "sydney":
+        case "melbourne":
+        case "brisbane":
+        case "perth":
+          country = "🇦🇺 Australia";
+          break;
+
+        // Egypt
+        case "cairo":
+        case "alexandria":
+          country = "🇪🇬 Egypt";
+          break;
+
+        // Brazil
+        case "rio de janeiro":
+        case "sao paulo":
+        case "brasilia":
+          country = "🇧🇷 Brazil";
+          break;
+
+        // Russia
+        case "moscow":
+        case "saint petersburg":
+          country = "🇷🇺 Russia";
+          break;
+
+        // Mexico
+        case "mexico city":
+        case "cancun":
+        case "guadalajara":
+          country = "🇲🇽 Mexico";
+          break;
+
+        default:
+          country = "❓ Unknown city or country not in list.";
+      }
+
+      result.textContent = country;
+    }
+  </script>
+
+</body>
+</html>
