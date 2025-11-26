@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>javascript events</h1>
+    <button onclick="showSalam()">click me</button>
+    <script>
+      function showSalam() {
+        alert("asalamu calaykum hanad");
+      }
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Events</h1>
+
+    <button id="myBtn">Click Me</button>
+
+    <script>
+      // Linking the event from JavaScript (NOT in HTML)
+      document.getElementById("myBtn").addEventListener("click", showSalam);
+
+      function showSalam() {
+        alert("asalamu calaykum hanad");
+      }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>onkeypress Example</title>
+</head>
+<body>
+
+<h2>Press any key inside the input</h2>
+
+<input type="text" onkeypress="showKey(event)" placeholder="Type here...">
+
+<p id="result"></p>
+
+<script>
+function showKey(event) {
+  document.getElementById("result").innerText = 
+    "You pressed: " + event.key;
+}
+</script>
+
+</body>
+</html>
