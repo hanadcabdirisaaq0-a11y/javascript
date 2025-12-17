@@ -22,7 +22,7 @@
 // // var Address = "25 streat"
 // // myCity = "xamar"
 // // myCity = "mogadisho"
-// //  console.log(address)
+/  / //console.log(address)
 
 
   var theAddressOfMyMother =  25
