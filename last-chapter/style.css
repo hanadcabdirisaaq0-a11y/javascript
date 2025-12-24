@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  transition: 0.3s;
+}
+
+.container {
+  width: 300px;
+  margin: 80px auto;
+  padding: 20px;
+  background: white;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+input {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Dark theme */
+.dark {
+  background-color: #1e1e1e;
+  color: white;
+}

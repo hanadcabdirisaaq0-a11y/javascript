@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Storage Example</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Welcome App</h2>
+
+    <input type="text" id="username" placeholder="Enter your name" />
+    
+    <div class="buttons">
+      <button onclick="saveName()">Save Name</button>
+      <button onclick="clearData()">Clear Data</button>
+    </div>
+
+    <p id="greeting"></p>
+
+    <hr />
+
+    <h3>Choose Theme</h3>
+    <button onclick="setTheme('light')">Light</button>
+    <button onclick="setTheme('dark')">Dark</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
